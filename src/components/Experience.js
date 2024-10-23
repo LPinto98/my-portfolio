@@ -10,7 +10,7 @@ import debate from "../assets/debatemate.jpg";
 import mmu from "../assets/mmu.jpg";
 import godelcloud from "../assets/godelcloud.jpg";
 import ibm from "../assets/ibm.png";
-
+import { motion } from "framer-motion";
 import styled, { keyframes } from "styled-components";
 
 // Keyframe animation for fade-in effect
@@ -114,7 +114,10 @@ const Experience = () => {
       id="experience"
       style={{ padding: "50px 20px", background: "#1c1e22" }}
     >
-      <h2
+      <motion.h2
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
         className="section-title"
         style={{
           color: "#f8f8f2",
@@ -123,7 +126,7 @@ const Experience = () => {
         }}
       >
         My Work Experience
-      </h2>
+      </motion.h2>
       {/* Custom Vertical Timeline with pink animation */}
       <AnimatedTimeline>
         <CustomTimelineElement

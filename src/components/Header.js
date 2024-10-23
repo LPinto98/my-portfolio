@@ -1,41 +1,45 @@
 import React from "react";
-import styled from "styled-components";
-import { ReactTyped as Typed } from "react-typed";
+import { Link } from "react-scroll";
 
-const HeaderContainer = styled.header`
-  background-color: #1c1e22;
-  padding: 50px 20px;
-  color: #f0a500;
-  font-family: "Consolas", monospace;
-  text-align: center;
-`;
-
-const Title = styled.h1`
-  color: #ff79c6;
-  font-size: 2.5rem;
-`;
-
-const SubTitle = styled(Typed)`
-  font-size: 1.5rem;
-  color: #8be9fd;
-`;
-
-const Header = () => {
+function Header() {
   return (
-    <HeaderContainer>
-      <Title>Larissa Pinto</Title>
-      <SubTitle
-        strings={[
-          "Data Scientist",
-          "Full-stack Developer",
-          "Deep Learning Enthusiast",
-        ]}
-        typeSpeed={50}
-        backSpeed={50}
-        loop
-      />
-    </HeaderContainer>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <Link to="home" smooth={true} duration={500}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="about" smooth={true} duration={500}>
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to="experience" smooth={true} duration={500}>
+              Experience
+            </Link>
+          </li>
+          <li>
+            <Link to="skills" smooth={true} duration={500}>
+              Skills
+            </Link>
+          </li>
+          <li>
+            <Link to="projects" smooth={true} duration={500}>
+              Projects
+            </Link>
+          </li>
+          <li>
+            <Link to="contact" smooth={true} duration={500}>
+              Contact
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
-};
+}
 
 export default Header;
