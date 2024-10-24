@@ -1,0 +1,86 @@
+/* Overall Terminal Window Styles */
+.terminal-window {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  width: 70%; /* Adjust width as needed */
+  margin: 50px auto;
+  font-family: "Courier New", Courier, monospace;
+  color: #d4d4d4;
+  overflow: hidden;
+}
+
+/* Header Style */
+.terminal-header {
+  background-color: #2d2d2d;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.window-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.window-controls span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.close {
+  background-color: #ff5f56;
+}
+
+.minimize {
+  background-color: #ffbd2e;
+}
+
+.maximize {
+  background-color: #27c93f;
+}
+
+.window-title {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+/* Terminal Body */
+.terminal-body {
+  padding: 20px;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+}
+
+/* Terminal Content */
+.terminal-content {
+  font-size: 16px;
+}
+
+.blinking-cursor {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-right-color: transparent;
+  }
+  50% {
+    border-right-color: #d4d4d4;
+  }
+}
+
+/* Skills Content */
+.skills-output ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+.skills-output ul li {
+  color: #ffff00;
+}
